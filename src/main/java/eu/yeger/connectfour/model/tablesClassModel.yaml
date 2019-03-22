@@ -1,0 +1,157 @@
+- c1: 	ClassModel
+  classes: 	game2 	player3 	field4 	
+  defaultPropertyStyle: 	POJO
+  defaultRoleType: 	"java.util.ArrayList<%s>"
+  mainJavaDir: 	"src/main/java"
+  packageName: 	eu.yeger.connectfour.model
+  packageSrcFolder: 	"src/main/java/eu/yeger/connectfour/model"
+
+- game2: 	Clazz
+  model: 	c1
+  modified: 	false
+  name: 	Game
+  propertyStyle: 	POJO
+  roles: 	players5 	currentPlayer6 	fields7 	
+
+- player3: 	Clazz
+  attributes: 	color8 	
+  model: 	c1
+  modified: 	false
+  name: 	Player
+  propertyStyle: 	POJO
+  roles: 	game9 	currentGame10 	fields11 	
+
+- field4: 	Clazz
+  model: 	c1
+  modified: 	false
+  name: 	Field
+  propertyStyle: 	POJO
+  roles: 	game12 	player13 	top14 	bottom15 	left16 	right17 	
+
+- players5: 	AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	game2
+  modified: 	false
+  name: 	players
+  other: 	game9
+  propertyStyle: 	POJO
+  roleType: 	"java.util.ArrayList<%s>"
+
+- currentPlayer6: 	AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	game2
+  modified: 	false
+  name: 	currentPlayer
+  other: 	currentGame10
+  propertyStyle: 	POJO
+  roleType: 	"java.util.ArrayList<%s>"
+
+- fields7: 	AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	game2
+  modified: 	false
+  name: 	fields
+  other: 	game12
+  propertyStyle: 	POJO
+  roleType: 	"java.util.ArrayList<%s>"
+
+- color8: 	Attribute
+  clazz: 	player3
+  modified: 	false
+  name: 	color
+  propertyStyle: 	POJO
+  type: 	String
+
+- game9: 	AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	player3
+  modified: 	false
+  name: 	game
+  other: 	players5
+  propertyStyle: 	POJO
+  roleType: 	"java.util.ArrayList<%s>"
+
+- currentGame10: 	AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	player3
+  modified: 	false
+  name: 	currentGame
+  other: 	currentPlayer6
+  propertyStyle: 	POJO
+  roleType: 	"java.util.ArrayList<%s>"
+
+- fields11: 	AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	player3
+  modified: 	false
+  name: 	fields
+  other: 	player13
+  propertyStyle: 	POJO
+  roleType: 	"java.util.ArrayList<%s>"
+
+- game12: 	AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	field4
+  modified: 	false
+  name: 	game
+  other: 	fields7
+  propertyStyle: 	POJO
+  roleType: 	"java.util.ArrayList<%s>"
+
+- player13: 	AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	field4
+  modified: 	false
+  name: 	player
+  other: 	fields11
+  propertyStyle: 	POJO
+  roleType: 	"java.util.ArrayList<%s>"
+
+- top14: 	AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	field4
+  modified: 	false
+  name: 	top
+  other: 	bottom15
+  propertyStyle: 	POJO
+  roleType: 	"java.util.ArrayList<%s>"
+
+- bottom15: 	AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	field4
+  modified: 	false
+  name: 	bottom
+  other: 	top14
+  propertyStyle: 	POJO
+  roleType: 	"java.util.ArrayList<%s>"
+
+- left16: 	AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	field4
+  modified: 	false
+  name: 	left
+  other: 	right17
+  propertyStyle: 	POJO
+  roleType: 	"java.util.ArrayList<%s>"
+
+- right17: 	AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	field4
+  modified: 	false
+  name: 	right
+  other: 	left16
+  propertyStyle: 	POJO
+  roleType: 	"java.util.ArrayList<%s>"
+
