@@ -92,12 +92,12 @@ public class GameController {
     //returns the winner or null if no player has won (yet)
     public Player checkWinner() {
         for (Player player : game.getPlayers()) {
-            if (checkIfHasWon(player)) return player;
+            if (hasWon(player)) return player;
         }
         return null;
     }
 
-    private boolean checkIfHasWon(final Player player) {
+    public boolean hasWon(final Player player) {
         //filters fields that can not be part of a streak
         LinkedHashSet<Field> fields = new PlayerTable(player)
                 .expandFields()
@@ -196,5 +196,9 @@ public class GameController {
         final String fieldString = sb.toString();
 
         System.out.println(fieldString);
+    }
+
+    public boolean stoneLimitReached() {
+        return new GameTable(game).expandPlayers().expandFields().toSet().size() == 2 * STONE_COUNT;
     }
 }
