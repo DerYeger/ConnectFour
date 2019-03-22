@@ -152,6 +152,10 @@ public class GameController {
     }
 
     public boolean stoneLimitReached() {
-        return new GameTable(game).expandPlayers().expandFields().toSet().size() == 2 * stoneLimit;
+        return new GameTable(game)
+                .expandPlayers()
+                .expandFields()
+                .toSet()
+                .size() == 2 * stoneLimit;
     }
 }
