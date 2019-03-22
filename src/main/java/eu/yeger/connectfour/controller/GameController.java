@@ -10,14 +10,14 @@ import java.util.*;
 
 public class GameController {
 
-    private static final int WIDTH = 4;
-    private static final int HEIGHT = 4;
+    public static final int WIDTH = 4;
+    public static final int HEIGHT = 4;
 
     private static final int REQUIRED_STREAK = 4;
 
     private static final int STONE_COUNT = WIDTH * HEIGHT / 2;
 
-    private static final ArrayList<String> PLAYER_COLORS = new ArrayList<>(Arrays.asList("R", "G"));
+    private static final ArrayList<String> PLAYER_COLORS = new ArrayList<>(Arrays.asList("0x336633ff", "0xe64d4dff"));
 
     private Game game;
 

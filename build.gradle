@@ -1,11 +1,19 @@
 plugins {
     id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
 }
 
 group 'eu.yeger'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
+
+mainClassName = 'eu.yeger.connectfour.App'
+
+javafx {
+    modules = [ 'javafx.controls', 'javafx.fxml']
+}
 
 repositories {
     mavenCentral()
