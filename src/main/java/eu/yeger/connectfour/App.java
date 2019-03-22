@@ -4,6 +4,7 @@ import eu.yeger.connectfour.controller.GameController;
 import eu.yeger.connectfour.model.Game;
 import eu.yeger.connectfour.model.Player;
 import eu.yeger.connectfour.view.GameScreenBuilder;
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Parent;
@@ -29,7 +30,7 @@ public class App extends Application {
 
     private Parent startNewGame() {
         GameController gc = new GameController();
-        final Game game = gc.init();
+        final Game game = gc.init(4, 4, 4);
         addPropertyChangeListeners(game, gc);
         return new GameScreenBuilder().getGameScreen(game, gc);
     }

@@ -28,7 +28,6 @@ public class GameScreenController {
     }
 
     private void addFieldCircles() {
-
         Field rowHead = new GameTable(game)
                 .expandFields()
                 .filter(f -> f.getTop() == null && f.getLeft() == null)
@@ -36,9 +35,9 @@ public class GameScreenController {
                 .iterator()
                 .next();
 
-        for (int y = 0; y < GameController.HEIGHT; y++) {
+        for (int y = 0; y < gc.getHeight(); y++) {
             Field field = rowHead;
-            for (int x = 0; x < GameController.WIDTH; x++) {
+            for (int x = 0; x < gc.getWidth(); x++) {
                 addFieldCircle(field, x, y);
                 field = field.getRight();
             }

@@ -11,7 +11,7 @@ public class ScenarioTests {
     @Test
     public void testScenario1() {
         final GameController gc = new GameController();
-        final Game game = gc.init();
+        final Game game = gc.init(4, 4, 4);
 
         final Player bob = game.getCurrentPlayer();
         final Player alice = gc.getOpponent(bob);
@@ -47,14 +47,12 @@ public class ScenarioTests {
         Assert.assertEquals(alice, game.getCurrentPlayer());
         Assert.assertEquals(5, bob.getFields().size());
         Assert.assertEquals(4, alice.getFields().size());
-
-        gc.drawFields();
     }
 
     @Test
     public void testCheckHorizontalWinner() {
         final GameController gc = new GameController();
-        final Game game = gc.init();
+        final Game game = gc.init(4, 4, 4);
 
         final Player bob = game.getCurrentPlayer();
         final Player alice = gc.getOpponent(bob);
@@ -95,14 +93,12 @@ public class ScenarioTests {
         Assert.assertEquals(bob, game.getCurrentPlayer());
         Assert.assertEquals(5, bob.getFields().size());
         Assert.assertEquals(5, alice.getFields().size());
-
-        gc.drawFields();
     }
 
     @Test
     public void testCheckVerticalWinner() {
         final GameController gc = new GameController();
-        final Game game = gc.init();
+        final Game game = gc.init(4, 4, 4);
 
         final Player bob = game.getCurrentPlayer();
         final Player alice = gc.getOpponent(bob);
@@ -138,14 +134,12 @@ public class ScenarioTests {
         Assert.assertEquals(alice, game.getCurrentPlayer());
         Assert.assertEquals(4, bob.getFields().size());
         Assert.assertEquals(3, alice.getFields().size());
-
-        gc.drawFields();
     }
 
     @Test
     public void testCheckDiagonalWinner() {
         final GameController gc = new GameController();
-        final Game game = gc.init();
+        final Game game = gc.init(4, 4, 4);
 
         final Player bob = game.getCurrentPlayer();
         final Player alice = gc.getOpponent(bob);
@@ -189,14 +183,12 @@ public class ScenarioTests {
         Assert.assertEquals(alice, game.getCurrentPlayer());
         Assert.assertEquals(6, bob.getFields().size());
         Assert.assertEquals(5, alice.getFields().size());
-
-        gc.drawFields();
     }
 
     @Test
     public void testCheckSecondDiagonalWinner() {
         final GameController gc = new GameController();
-        final Game game = gc.init();
+        final Game game = gc.init(4, 4, 4);
 
         final Player bob = game.getCurrentPlayer();
         final Player alice = gc.getOpponent(bob);
@@ -240,7 +232,5 @@ public class ScenarioTests {
         Assert.assertEquals(alice, game.getCurrentPlayer());
         Assert.assertEquals(6, bob.getFields().size());
         Assert.assertEquals(5, alice.getFields().size());
-
-        gc.drawFields();
     }
 }
