@@ -118,10 +118,8 @@ public class GameController {
     }
 
     private boolean isHeadOfStreak(final Field field) {
-        return isHeadOfStreakInDirection(field, Direction.DOWN)
-                || isHeadOfStreakInDirection(field, Direction.RIGHT)
-                || isHeadOfStreakInDirection(field, Direction.DOWN_RIGHT)
-                || isHeadOfStreakInDirection(field, Direction.UP_RIGHT);
+        for (Direction direction : Direction.values()) if (isHeadOfStreakInDirection(field, direction)) return true;
+        return false;
     }
 
     private boolean isHeadOfStreakInDirection(final Field field, final Direction direction) {
